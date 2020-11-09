@@ -19,7 +19,7 @@ public class Student
     private String name;
 
     private String id;
-    
+     
     private String Courses;
     
     // A BSc course has 120 credits, each module has 15 Credits
