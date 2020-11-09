@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Course
+comment1.params=CT\ CN
+comment1.target=Course(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ GetCT()
+comment3.params=
+comment3.target=java.lang.String\ GetCN()
+numComments=4

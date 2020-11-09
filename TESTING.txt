@@ -1,0 +1,93 @@
+Lab class Tuesday 29th September 2020
+Instructor: Nicholas Day   Room: G100
+Class list:
+Number of students: 0
+labClass1.numberOfStudents()
+    returned int 0
+LabClass labClass1 = new LabClass(3);
+LabClass labClass1 = new LabClass(3);
+Student student1 = new Student();
+labClass1.printList();
+Lab class Tuesday 29th September 2020
+Instructor: Nicholas Day   Room: G100
+Class list:
+Number of students: 0
+LabClass labClass1 = new LabClass(3);
+labClass1.printList();
+Lab class Tuesday 29th September 2020
+Instructor: Nicholas Day   Room: G100
+Class list:
+Number of students: 0
+LabClass labClass2 = new LabClass(3);
+Student student1 = new Student("Bob", "21904563");
+Student student2 = new Student("Henry Sangster", "21908327");
+Student student3 = new Student("Jaydon Webster", "21904639");
+labClass2.printList();
+Lab class Tuesday 29th September 2020
+Instructor: Nicholas Day   Room: G100
+Class list:
+Number of students: 0
+LabClass labClass3 = new LabClass(3);
+Student student1 = new Student("Jaydon Webster", "21908694");
+labClass3.numberOfStudents()
+    returned int 0
+labClass3.enrollStudent(student1);
+labClass3.numberOfStudents()
+    returned int 1
+LabClass labClass4 = new LabClass(3);
+labClass4.printList();
+Lab class Tuesday 29th September 2020
+Instructor: Nicholas Day   Room: G100
+Class list:
+Number of students: 0
+Student student1 = new Student("Henry Sangster", "21909870");
+labClass4.enrollStudent(student1);
+Student student4 = new Student("Jayden Webster", "21908215");
+labClass4.enrollStudent(student4);
+Student student5 = new Student("Chris Simmons", "21904737");
+labClass4.enrollStudent(student5);
+labClass4.printList();
+Lab class Tuesday 29th September 2020
+Instructor: Nicholas Day   Room: G100
+Class list:
+Henry Sangster, student ID: 21909870, credits: 0
+Jayden Webster, student ID: 21908215, credits: 0
+Chris Simmons, student ID: 21904737, credits: 0
+Number of students: 3
+LabClass labClass1 = new LabClass(3);
+Student student1 = new Student("Henry Sangster", "21903816");
+labClass1.enrollStudent(student1);
+Student student2 = new Student("Jayden Webster", "21904675");
+labClass1.enrollStudent(student2);
+Student student3 = new Student("Chris Simmons", "21906134");
+labClass1.enrollStudent(student3);
+labClass1.printList();
+Lab class Tuesday 29th September 2020
+Instructor: Nicholas Day   Room: G100
+Class list:
+Henry Sangster, student ID: 21903816, credits: 20
+Jayden Webster, student ID: 21904675, credits: 20
+Chris Simmons, student ID: 21906134, credits: 20
+Number of students: 3
+Student student4 = new Student("Nikc", "21906758");
+student4.changeName("Nick");
+labClass1.enrollStudent(student4);
+The class is full, you cannot enrol.
+LabClass labClass2 = new LabClass(3);
+Student student1 = new Student("Nikc", "21905768");
+student1.changeName("Nick");
+labClass2.enrollStudent(student1);
+Student student2 = new Student("Hen", "21904836");
+student2.changeName("Henry");
+labClass2.enrollStudent(student2);
+Student student3 = new Student("Jau", "21909021");
+student3.changeName("Jay");
+labClass2.enrollStudent(student3);
+labClass2.printList();
+Lab class Tuesday 29th September 2020
+Instructor: Nicholas Day   Room: G100
+Class list:
+Nick, student ID: 21905768, credits: 20
+Henry, student ID: 21904836, credits: 20
+Jay, student ID: 21909021, credits: 20
+Number of students: 3
