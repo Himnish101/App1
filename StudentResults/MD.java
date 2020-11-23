@@ -1,28 +1,29 @@
 /**
- * Write a description of class Modules here.
+ * Write a description of class MD here.
  *
  * @author (your name)
  * @version (a version number or a date)
- */
+ */ 
 
 import java.lang.Object;
 
 import java.util.*;
 
-public class Modules
+public class MD
 {
-    private String module;
+    private String D;
     
-    public Modules(String M1)
+    public MD(String Details)
     {
-        module = M1;
+        D = Details;
     }
     
     @Override
+    
     public String toString()
     {
-        return String.format("%s Module: %s",
+        return String.format("%s Details of Module: %s",
                             getClass().getName(),
-                            module);
+                            D);
     }
 }

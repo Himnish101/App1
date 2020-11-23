@@ -89,10 +89,13 @@ public class LabClass
     public void printList()
     {
         System.out.println("Lab class " + timeAndDay);
+        
+        System.out.println();
+        
         System.out.println("Instructor: " + instructor + "   Room: " + room);
         
-        
-        
+        System.out.println();
+       
         System.out.println("Class list:");
         
         for(Student student : students) 

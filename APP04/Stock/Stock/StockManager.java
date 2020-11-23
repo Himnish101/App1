@@ -29,6 +29,16 @@ public class StockManager
         stock.add(item);
     }
     
+    public void ReplaceName(int option, Product item)
+    {
+        stock.set(option, item);
+    }
+    
+    public void RemoveName(Product item)
+    {
+        stock.remove(item);
+    }
+    
     /**
      * Receive a delivery of a particular product.
      * Increase the quantity of the product by the given amount.
@@ -41,9 +51,19 @@ public class StockManager
         
         if(product != null) 
         {
-            System.out.println(product.toString());
+            product.increaseQuantity(amount);
             
-            System.out.println(product.
+            product.toString();
+        }
+        else
+        {
+            System.out.println("Item doesn't exist.");
+            
+            System.out.println();
+            
+            System.out.println("Please try again.");
+            
+            System.out.println();
         }
     }
     
@@ -60,13 +80,13 @@ public class StockManager
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    public void sellProduct(int id)
+    public void sellProduct(int id, int amount)
     {
         Product product = findProduct(id);
         
         if(product != null) 
         {
-            product.sellOne();
+            product.sellOne(amount);
         }
     }    
 

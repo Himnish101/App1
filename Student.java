@@ -19,8 +19,10 @@ public class Student
     private String name;
 
     private String id;
+    
+    private ArrayList<Course> StudentCourse;
      
-    private String Courses;
+    private Course course;
     
     // A BSc course has 120 credits, each module has 15 Credits
     private int credits;
@@ -28,15 +30,22 @@ public class Student
     /**
      * Create a new student with a given name and ID number.
      */
-    public Student(String FullName, String StudentId, String C)
+    public Student(String FullName, String StudentId)
     {
         name = FullName;
         id = StudentId;
         credits = 20;
-        Courses = C;
     }
     
+    public Student(Course C)
+    {
+        this.course = C; 
+    }
     
+    public void AddCourse()
+    {
+        StudentCourse.add(this.course);
+    }
     
     /**
      * Return the full name of this student.
@@ -94,7 +103,7 @@ public class Student
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        System.out.println(name + ", student ID: " + id + ", credits: " + credits + ", course: " + this.course);
         
         System.out.println();
     }

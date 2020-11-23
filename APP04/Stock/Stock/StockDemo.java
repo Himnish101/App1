@@ -6,8 +6,13 @@
  * @author David J. Barnes and Michael Kölling.
  * @version 2016.02.29
  */
+
+import java.util.*;
+
 public class StockDemo
 {
+    static Scanner key = new Scanner(System.in);
+    
     // The stock manager.
     private StockManager manager;
 
@@ -56,11 +61,85 @@ public class StockDemo
     
     private void demoDeliverProducts()
     {
+        int id;
         
+        int amount;
+        
+        System.out.println("What item do you need to restock (by id)?");
+        
+        id = key.nextInt();
+        
+        System.out.println();
+        
+        System.out.println("How much do you re-stock on this item.");
+        
+        amount = key.nextInt();
+        
+        manager.deliverProduct(id, amount);
     }
 
     private void demoSellProducts()
     {
+        int id;
         
-    }    
+        int amount;
+        
+        System.out.println("What item you want to buy? (by id)");
+        
+        id = key.nextInt();
+        
+        System.out.println();
+        
+        System.out.println("How many do you want to buy of this item?");
+        
+        amount = key.nextInt();
+        
+        manager.sellProduct(id, amount);
+    }
+    
+    private void RenameProducts()
+    {
+        String ChooseName;
+        
+        String RenameItems;
+        
+        int Index;
+        
+        int ID;
+        
+        System.out.println("Choose the item you want to rename: ");
+        
+        ChooseName = key.next();
+        
+        ID = key.nextInt();
+        
+        System.out.println();
+        
+        Index = key.nextInt();
+        
+        System.out.println();
+        
+        System.out.println("What do you want to rename the item as?");
+        
+        RenameItems = key.next();
+        
+        manager.ReplaceName(Index, new Product(ID, RenameItems));
+    }
+    
+    public void RemoveItems()
+    {
+        String RItems;
+        
+        int ID;
+        
+        System.out.println("What item do you want to remove?");
+        
+        RItems = key.next();
+        
+        System.out.println();
+        
+        ID = key.nextInt();
+        
+        manager.RemoveName(new Product(ID, RItems));
+    }
 }

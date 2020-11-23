@@ -13,6 +13,8 @@ public class Students
 {
     private ArrayList<String> modules;
     
+    private ArrayList<String> Details;
+   
     static Scanner key = new Scanner(System.in);
     
     private int Age;
@@ -23,7 +25,7 @@ public class Students
 
     private String Location;
 
-    public Students(int A, String N, String L, int T)
+    public Students(String N, int A, String L, int T)
     {
         Name = N;
         
@@ -53,6 +55,12 @@ public class Students
     {
         String M;
         
+        String D;
+        
+        modules = new ArrayList<String>();
+        
+        Details = new ArrayList<String>();
+        
         int G;
         
         int G2;
@@ -60,9 +68,7 @@ public class Students
         int G3;
         
         int G4;
-        
-        modules = new ArrayList<String>();
-        
+                        
         System.out.println("Thank you for your patience.");
         
         System.out.println();
@@ -84,6 +90,14 @@ public class Students
             modules.add(M);
             
             System.out.println();
+            
+            System.out.println("Code for Module " + i + ": ");
+            
+            D = key.next();
+            
+            Details.add(D);
+            
+            System.out.println();
         }
         
         System.out.println();
@@ -92,25 +106,25 @@ public class Students
         
         System.out.println();
         
-        System.out.println("Average grade of your first A-Level topic: ");
+        System.out.println("Average grade of your first module: ");
         
         G = key.nextInt();
         
         System.out.println();
         
-        System.out.println("Average grade of your second A-Level topic: ");
+        System.out.println("Average grade of your second module: ");
         
         G2 = key.nextInt();
         
         System.out.println();
         
-        System.out.println("Average grade of your third A-Level topic: ");
+        System.out.println("Average grade of your third module: ");
         
         G3 = key.nextInt();
         
         System.out.println();
         
-        System.out.println("Average grade for your fourth A-Level topic: ");
+        System.out.println("Average grade for your fourth module: ");
         
         G4 = key.nextInt();
         
@@ -120,11 +134,17 @@ public class Students
         
         System.out.println();
         
-        for(String Mod : modules)
+        for(int i = 0; i < modules.size(); i++)
         {
-            Modules M6 = new Modules(Mod);
+            Modules M6 = new Modules(modules.get(i)); 
             
-            System.out.println(Mod);
+            MD det = new MD(Details.get(i)); 
+            
+            System.out.println(M6);
+            
+            System.out.println();
+            
+            System.out.println(det);
             
             System.out.println();
         }
@@ -137,31 +157,31 @@ public class Students
         }
         else if(G > 39  && G <= 49)
         {
-            System.out.println("You have been awarded a D for your first A-Level subject");
+            System.out.println("You have been awarded a D for your first module.");
                 
             System.out.println();
         }
         else if(G > 49 && G <= 59)
         {
-            System.out.println("You have been awarded a C for your first A-Level subject.");
+            System.out.println("You have been awarded a C for your first module.");
                 
             System.out.println();
         }
         else if(G > 59 && G <= 69)
         {
-            System.out.println("You have been awarded a B for your first A-Level subject.");
+            System.out.println("You have been awarded a B for your first module.");
                 
             System.out.println();
         }
         else if(G > 69 && G <= 79)
         {
-            System.out.println("You have been awarded an A for your first A-Level subject.");
+            System.out.println("You have been awarded an A for your first module.");
                 
             System.out.println();
         }
         else if(G > 79)
         {
-            System.out.println("You have been awarded an A* for your A-Level subject.");
+            System.out.println("You have been awarded an A* for your module.");
                 
             System.out.println();
         }
@@ -174,19 +194,19 @@ public class Students
         }
         else if(G2 > 39  && G2 <= 49)
         {
-            System.out.println("You have been awarded a D for your second A-Level subject");
+            System.out.println("You have been awarded a D for your second module.");
                 
             System.out.println();
         }
         else if(G2 > 49 && G2 <= 59)
         {
-            System.out.println("You have been awarded a C for your second A-Level subject.");
+            System.out.println("You have been awarded a C for your second module.");
                 
             System.out.println();
         }
         else if(G2 > 59 && G2 <= 69)
         {
-            System.out.println("You have been awarded a B for your second A-Level subject.");
+            System.out.println("You have been awarded a B for your second module.");
                 
             System.out.println();
                 
@@ -194,13 +214,13 @@ public class Students
         }
         else if(G2 > 69 && G2 <= 79)
         {
-            System.out.println("You have been awarded an A for your second A-Level subject.");
+            System.out.println("You have been awarded an A for your second module.");
                 
             System.out.println();
         }
         else if(G2 > 79)
         {
-            System.out.println("You have been awarded an A* for your second A-Level subject.");
+            System.out.println("You have been awarded an A* for your second module.");
                 
             System.out.println();
         }
@@ -214,31 +234,31 @@ public class Students
         }
         else if(G3 > 39  && G3 <= 49)
         {
-            System.out.println("You have been awarded a D for your first A-Level subject");
+            System.out.println("You have been awarded a D for your third module.");
                 
             System.out.println();
         }
         else if(G > 49 && G <= 59)
         {
-            System.out.println("You have been awarded a C for your third A-Level subject.");
+            System.out.println("You have been awarded a C for your third module.");
                 
             System.out.println();
         }
         else if(G3 > 59 && G3 <= 69)
         {
-            System.out.println("You have been awarded a B for your third A-Level subject.");
+            System.out.println("You have been awarded a B for your third module.");
                 
             System.out.println();
         }
         else if(G3 > 69 && G3 <= 79)
         {
-            System.out.println("You have been awarded an A for your third A-Level subject.");
+            System.out.println("You have been awarded an A for your third module.");
                 
             System.out.println();
         }
         else if(G3 > 79)
         {
-            System.out.println("You have been awarded an A* for your third A-Level subject.");
+            System.out.println("You have been awarded an A* for your third module.");
                 
             System.out.println();
         }
@@ -251,31 +271,31 @@ public class Students
         }
         else if(G3 > 39  && G3 <= 49)
         {
-            System.out.println("You have been awarded a D for your fourth A-Level subject");
+            System.out.println("You have been awarded a D for your fourth module.");
                 
             System.out.println();
         }
         else if(G > 49 && G <= 59)
         {
-            System.out.println("You have been awarded a C for your fourth A-Level subject.");
+            System.out.println("You have been awarded a C for your fourth module.");
                 
             System.out.println();
         }
         else if(G3 > 59 && G3 <= 69)
         {
-            System.out.println("You have been awarded a B for your fourth A-Level subject.");
+            System.out.println("You have been awarded a B for your fourth module.");
                 
             System.out.println();
         }
         else if(G3 > 69 && G3 <= 79)
         {
-            System.out.println("You have been awarded an A for your fourth A-Level subject.");
+            System.out.println("You have been awarded an A for your fourth module.");
                 
             System.out.println();
         }
         else if(G3 > 79)
         {
-            System.out.println("You have been awarded an A* for your fourth+ A-Level subject.");
+            System.out.println("You have been awarded an A* for your fourth module.");
                 
             System.out.println();
         }
